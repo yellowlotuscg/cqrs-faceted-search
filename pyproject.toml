@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cqrs-faceted-search"
+version = "0.1.0"
+description = "CQRS document catalog with faceted search and provenance"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "sqlalchemy>=2.0",
+  "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "httpx>=0.27", "ruff>=0.6"]
+azure = ["azure-search-documents>=11.6", "azure-identity>=1.16"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

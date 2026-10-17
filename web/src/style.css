@@ -1,0 +1,25 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #20252b; background: #f4f1ea; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1280px; margin: auto; padding: 48px 32px; }
+header { max-width: 720px; margin-bottom: 32px; }
+.eyebrow, .hit-meta { color: #8b4b2d; letter-spacing: .12em; font-size: 12px; font-weight: 700; }
+h1 { font-family: Georgia, serif; font-size: clamp(36px, 5vw, 64px); line-height: 1; margin: 12px 0; }
+form { display: flex; gap: 8px; max-width: 800px; margin-bottom: 32px; }
+input { flex: 1; border: 1px solid #bfb7a9; background: white; padding: 14px 16px; font-size: 16px; border-radius: 5px; }
+button { border: 0; background: #20252b; color: white; padding: 12px 16px; border-radius: 4px; cursor: pointer; }
+button:disabled { opacity: .4; cursor: default; }
+.layout { display: grid; grid-template-columns: 210px minmax(300px, 1fr) 280px; gap: 28px; align-items: start; }
+aside, .hit, .provenance { background: rgba(255,255,255,.75); border: 1px solid #ded8cc; border-radius: 6px; }
+aside { padding: 18px; } aside h2 { margin-top: 0; font-family: Georgia, serif; }
+.facet { margin: 20px 0; } .facet h3 { text-transform: uppercase; font-size: 11px; letter-spacing: .1em; }
+.chip { display: flex; justify-content: space-between; width: 100%; background: transparent; color: #20252b; text-align: left; padding: 7px 0; }
+.chip:hover { color: #8b4b2d; }
+.result-count { color: #6f706e; margin-bottom: 10px; }
+.hit { padding: 18px; margin-bottom: 10px; cursor: pointer; } .hit:hover { border-color: #8b4b2d; }
+.hit h2 { font: 22px Georgia, serif; margin: 8px 0; } .hit p { margin: 8px 0 14px; line-height: 1.5; } small { color: #6f706e; }
+.provenance { position: sticky; top: 20px; } .close { float: right; padding: 5px 8px; font-size: 11px; }
+dt { color: #6f706e; font-size: 12px; margin-top: 12px; } dd { margin: 3px 0; word-break: break-word; } .mono { font: 11px monospace; }
+pre { white-space: pre-wrap; background: #f4f1ea; padding: 12px; font: 12px/1.5 monospace; }
+nav { display: flex; gap: 8px; margin-top: 16px; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .provenance { position: static; } }

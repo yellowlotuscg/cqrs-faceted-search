@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+catalog.db
+*.db
+.env
+web/node_modules/
+web/dist/
+*.tsbuildinfo
+infra/main.json
+.DS_Store
